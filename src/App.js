@@ -1,100 +1,117 @@
 import React, { useState, useEffect } from "react";
+import { Helmet } from "react-helmet";
 import AItoolsData from "./AITools/toolsData";
 import contentData from "./AITools/popUp";
-import Select from "react-select";
 import "./App.css";
 
 const toolsData = AItoolsData;
 
 const App = () => {
+  // State management
   const [search, setSearch] = useState("");
-  const [category, setCategory] = useState("all");
+  const [selectedCategories, setSelectedCategories] = useState([]);
   const [itemsPerPage, setItemsPerPage] = useState(20);
   const [currentPage, setCurrentPage] = useState(1);
-
-  // Theme toggle state
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const [showCategoryModal, setShowCategoryModal] = useState(false);
+  const [categories, setCategories] = useState([]);
+  const [categorySearch, setCategorySearch] = useState("");
+  const [popupTitle, setPopupTitle] = useState("");
+  const [popupContent, setPopupContent] = useState("");
+  const [isPopupVisible, setIsPopupVisible] = useState(false);
 
-  // Toggle theme function
+  // Initialize categories
+  useEffect(() => {
+    const uniqueCategories = [...new Set(toolsData.map(tool => tool.category))];
+    setCategories(uniqueCategories);
+  }, []);
+
+  // Theme toggle
   const toggleTheme = () => {
     setIsDarkMode(!isDarkMode);
     document.body.style.backgroundColor = isDarkMode ? "white" : "black";
     document.body.style.color = isDarkMode ? "black" : "white";
   };
 
-  // PopUp Data
-  const [popupTitle, setPopupTitle] = useState("");
-  const [popupContent, setPopupContent] = useState("");
-  const [isPopupVisible, setIsPopupVisible] = useState(false);
+  // Category handling
+  const handleCategorySelect = (category) => {
+    setSelectedCategories(prev => 
+      prev.includes(category)
+        ? prev.filter(c => c !== category)
+        : [...prev, category]
+    );
+  };
 
-  // Functions to show and hide the popup
-  const showPopup = (title, content) => {
+  const applyCategoryFilter = () => {
+    setShowCategoryModal(false);
+    setCurrentPage(1);
+  };
+
+  // Filter tools
+  const filteredTools = toolsData.filter(tool => {
+    const matchesSearch = tool.name.toLowerCase().includes(search.toLowerCase());
+    const matchesCategory = selectedCategories.length === 0 || 
+      selectedCategories.includes(tool.category);
+    return matchesSearch && matchesCategory;
+  });
+
+  // Pagination
+  useEffect(() => {
+    setCurrentPage(1);
+  }, [search, selectedCategories]);
+
+  const totalPages = Math.ceil(filteredTools.length / itemsPerPage);
+  const startIndex = (currentPage - 1) * itemsPerPage;
+  const displayedTools = filteredTools.slice(startIndex, startIndex + itemsPerPage);
+
+  const handlePageChange = (newPage) => {
+    if (newPage >= 1 && newPage <= totalPages) {
+      setCurrentPage(newPage);
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+  };
+
+  // Popup handling
+  const showInfoPopup = (title, content) => {
     setPopupTitle(title);
     setPopupContent(content);
     setIsPopupVisible(true);
   };
 
-  const hidePopup = () => {
+  const hideInfoPopup = () => {
     setIsPopupVisible(false);
     setPopupTitle("");
     setPopupContent("");
   };
 
-  // Filter tools based on search and category
-  const filteredTools = toolsData.filter(
-    (tool) =>
-      (category === "all" || tool.category === category) &&
-      tool.name.toLowerCase().includes(search.toLowerCase())
+  // Filter categories for modal search
+  const filteredCategories = categories.filter(category =>
+    category.toLowerCase().includes(categorySearch.toLowerCase())
   );
-
-  // Reset currentPage if filters change
-  useEffect(() => {
-    setCurrentPage(1); // Reset to page 1 when filters change
-  }, [search, category]);
-
-  // Pagination calculations
-  const totalPages = Math.ceil(filteredTools.length / itemsPerPage);
-  const startIndex = (currentPage - 1) * itemsPerPage;
-  const displayedTools = filteredTools.slice(
-    startIndex,
-    startIndex + itemsPerPage
-  );
-
-  // Handle page change
-  const handlePageChange = (newPage) => {
-    if (newPage >= 1 && newPage <= totalPages) {
-      setCurrentPage(newPage);
-
-      // Smooth scroll to the top
-      window.scrollTo({
-        top: 0,
-        behavior: "smooth",
-      });
-    }
-  };
-
-  // Get unique categories from toolsData
-  const categories = ["all", ...new Set(toolsData.map((tool) => tool.category))];
-  const categoryOptions = categories.map((cat) => ({
-    value: cat,
-    label: cat === "all" ? "All Categories" : cat,
-  }));
-
-  // Handle Select onChange to update the category state
-  const handleCategoryChange = (selectedOption) => {
-    setCategory(selectedOption ? selectedOption.value : "all");
-  };
-
-  // Count total tools
-  const totalToolsCount = toolsData.length;
-  const categoryCount = category === "all" 
-    ? totalToolsCount
-    : filteredTools.length;
 
   return (
     <div className={`app ${isDarkMode ? "dark-mode" : "light-mode"}`}>
+      <Helmet>
+        <title>AI Tools Directory</title>
+        <meta name="description" content="Explore and discover the latest AI tools in our comprehensive directory." />
+        <meta name="robots" content="index, follow" />
+        <meta property="og:title" content="AI Tools Directory" />
+        <meta property="og:description" content="Find the best AI tools to enhance productivity and innovation." />
+        <meta property="og:image" content="https://www.aitooldirectory.io/aitooldirectory.png" />
+        <meta property="og:url" content="https://www.aitooldirectory.io" />
+        <meta property="og:image:width" content="1200" />
+        <meta property="og:image:height" content="630" />
+      </Helmet>
       <header className="header">
-        <h1>AI Tools Directory</h1>
+        <h1>
+          <a href="/" className="logo-link">
+            <img
+              src={require("./aitool.png")}
+              alt="AI Tools Directory Logo"
+              className="logo-image"
+            />
+          </a>
+        </h1>
         <div
           className="theme-toggle"
           onClick={toggleTheme}
@@ -110,6 +127,54 @@ const App = () => {
           {isDarkMode ? "🌙" : "☀️"}
         </div>
       </header>
+      {/* Category Selection Modal */}
+      {showCategoryModal && (
+        <div className="category-modal">
+          <div className="modal-content">
+            <h3>Select Categories ({selectedCategories.length})</h3>
+            <input
+              type="text"
+              placeholder="Search categories..."
+              value={categorySearch}
+              onChange={(e) => setCategorySearch(e.target.value)}
+              className="category-search"
+            />
+            <div className="category-list">
+              {filteredCategories.map(category => (
+                <label key={category} className="category-item">
+                  <input class="selectcategory"
+                    type="checkbox"
+                    checked={selectedCategories.includes(category)}
+                    onChange={() => handleCategorySelect(category)}
+                  />
+                  {category}
+                </label>
+              ))}
+            </div>
+            <div className="modal-actions">
+              <button onClick={() => setShowCategoryModal(false)}>Cancel</button>
+              <button onClick={applyCategoryFilter}>Apply</button>
+            </div>
+          </div>
+        </div>
+      )}
+
+      {/* Info Popup */}
+      {isPopupVisible && (
+        <>
+          <div className="overlay" onClick={hideInfoPopup}></div>
+          <div className="popup">
+            <div className="popup-header">{popupTitle}</div>
+            <div
+              className="popup-content"
+              dangerouslySetInnerHTML={{ __html: popupContent }}
+            ></div>
+            <button className="popup-close" onClick={hideInfoPopup}>
+              Close
+            </button>
+          </div>
+        </>
+      )}     
 
       <section className="hero">
         <div className="filters">
@@ -119,121 +184,80 @@ const App = () => {
             value={search}
             onChange={(e) => setSearch(e.target.value)}
           />
-          <div className="category-filter">
-            <Select
-              options={categoryOptions}
-              value={categoryOptions.find((option) => option.value === category) || null}
-              onChange={handleCategoryChange}
-              placeholder="Select Category"
-              isClearable
-              styles={{
-                control: (provided) => ({
-                  ...provided,
-                  width: '300px',  // Set dropdown width to 300px
-                }),
-                singleValue: (provided) => ({
-                  ...provided,
-                  color: 'black',  // Set color of the selected value to black
-                }),
-                option: (provided) => ({
-                  ...provided,
-                  color: 'black',  // Set color of the options to black
-                }),
-                menu: (provided) => ({
-                  ...provided,
-                  color: 'black',  // Set color of the dropdown menu to black
-                }),
-              }}
-            />            
-          </div>          
+          
+          <button 
+            className="category-button"
+            onClick={() => setShowCategoryModal(true)}
+          >
+            Select Categories {selectedCategories.length > 0 && `(${selectedCategories.length})`}
+          </button>
+
           <span className="tool-count">
-              {category === "all" ? `${totalToolsCount} results` : `${categoryCount} results`}
-            </span>
+            {filteredTools.length} results
+          </span>
         </div>
       </section>
 
-      <section id="features" className="features">
-        <div>
-          <main>
-            <div className="tool-grid">
-              {displayedTools.map((tool) => (
-                <div key={tool.name} className="tool-card">
-                  <img
-                    src={require("./logo/" + tool.icon)}
-                    alt={`${tool.name} icon`}
-                  />
-                  <h3 className="toolname">{tool.name}</h3>
-                  <p>{tool.description}</p>
-                  <a
-                    href={tool.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    Learn More
-                  </a>
-                </div>
-              ))}
-            </div>
-          </main>
-          {filteredTools.length > 0 && (
-            <div className="pagination">
-              <button
-                onClick={() => handlePageChange(currentPage - 1)}
-                disabled={currentPage === 1}
+      <section className="features">
+        <div className="tool-grid">
+          {displayedTools.map((tool) => (
+            <div key={tool.name} className="tool-card">
+              <img
+                src={require("./logo/" + tool.icon)}
+                alt={`${tool.name} icon`}
+              />
+              <h3>{tool.name}</h3>
+              <p>{tool.description}</p>
+              <a
+                href={tool.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="learn-more"
               >
-                Previous
-              </button>
-              <span>
-                Page {currentPage} of {totalPages}
-              </span>
-              <button
-                onClick={() => handlePageChange(currentPage + 1)}
-                disabled={currentPage === totalPages}
-              >
-                Next
-              </button>
+                Learn More
+              </a>
             </div>
-          )}
-          {filteredTools.length === 0 && (
-            <div>No results found</div>
-          )}
+          ))}
         </div>
-      </section>
+        </section>
+        {filteredTools.length > 0 && (
+          <div className="pagination">
+            <button
+              onClick={() => handlePageChange(currentPage - 1)}
+              disabled={currentPage === 1}
+            >
+              Previous
+            </button>
+            <span>Page {currentPage} of {totalPages}</span>
+            <button
+              onClick={() => handlePageChange(currentPage + 1)}
+              disabled={currentPage === totalPages}
+            >
+              Next
+            </button>
+          </div>
+        )}
+        {filteredTools.length === 0 && <div>No results found</div>}
+      
 
       <section className="cta">
         <h3>Join the AI Revolution</h3>
         <p>Sign up now to access the latest AI tools and stay ahead of the curve.</p>
-        <button>Get Started</button>
+        <button className="contact">Get Started</button>
       </section>
 
       <footer className="footer">
         <div className="footer-menu">
-          <button
-            onClick={() =>
-              showPopup("About Us", contentData.aboutUs)
-            }
-          >
+          <button onClick={() => showInfoPopup("About Us", contentData.aboutUs)}>
             About Us
           </button>
-          <button
-            onClick={() =>
-              showPopup("Privacy Policy", contentData.privacyPolicy)
-            }
-          >
+          <button onClick={() => showInfoPopup("Privacy Policy", contentData.privacyPolicy)}>
             Privacy Policy
           </button>
-          <button
-            onClick={() =>
-              showPopup("Terms of Use", contentData.termsOfUse)
-            }
-          >
+          <button onClick={() => showInfoPopup("Terms of Use", contentData.termsOfUse)}>
             Terms of Use
           </button>
-          <button
-            onClick={() =>
-              showPopup("Contact Us", contentData.contactUs)
-            }
-          >
+          <button onClick={() => showInfoPopup("Contact Us", contentData.contactUs)}>
             Contact Us
           </button>
         </div>
@@ -241,23 +265,6 @@ const App = () => {
           <p>© 2025 AIToolDirectory.V2</p>
         </div>
       </footer>
-
-      {/* Overlay and Popup */}
-      {isPopupVisible && (
-        <>
-          <div className="overlay" onClick={hidePopup}></div>
-          <div className="popup">
-            <div className="popup-header">{popupTitle}</div>
-            <div
-              className="popup-content"
-              dangerouslySetInnerHTML={{ __html: popupContent }}
-            ></div>
-            <button className="popup-close" onClick={hidePopup}>
-              Close
-            </button>
-          </div>
-        </>
-      )}
     </div>
   );
 };

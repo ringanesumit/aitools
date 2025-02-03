@@ -455,6 +455,340 @@ const toolsData = [
     "icon": "pictory.png",
     "link": "https://pictory.ai",
     "description": "An AI tool that assists in creating visual content, such as images and videos, optimized for SEO. It helps in enhancing user engagement and improving search rankings."
-  }
+  },
+  //Audio & Music Transcription tools
+  {
+    "name": " tldv",
+    "category": "Audio & Music Transcription",
+    "icon": "tldv.png",
+    "link": "https://tldv.io",
+    "description": "AI-powered meeting recorder that transcribes calls and generates concise summaries."
+  }, 
+  {
+    "name": "descript",
+    "category": "Audio & Music Transcription",
+    "icon": "descript.png",
+    "link": "https://www.descript.com/?redirect=false",
+    "description": "Descript is a versatile video and podcast editor with AI-powered transcription, screen recording, and effects, enabling effortless editing and seamless team collaboration."
+},
+{
+  "name": "Rumi",
+  "category": "Audio & Music Transcription",
+  "icon": "Rumi.png",
+  "link": "https://rumi.ai",
+  "description": "Waitroom enhances video meetings with a queue and timer format, boosting collaboration, productivity, and skill development while reducing distractions and fatigue."
+},
+{
+  "name": "Supernormal",
+  "category": "Audio & Music Transcription",
+  "icon": "Supernormal.png",
+  "link": "https://www.supernormal.com",
+  "description": "Supernormal is a data-driven platform for asynchronous video updates, using AI to summarize and keep teams connected without meetings or time zone conflicts."
+}, {
+  "name": "Otter AI",
+  "category": "Audio & Music Transcription",
+  "icon": "Otterai.png",
+  "link": "https://otter.ai",
+  "description": "Otter AI records and transcribes meetings with high accuracy, creating searchable notes in real time and integrating seamlessly across iOS, Android, and Chrome."
+},
+{
+  "name": "Laxis ",
+  "category": "Audio & Music Transcription",
+  "icon": "Laxis.png",
+  "link": "https://www.laxis.com",
+  "description": "Laxis AI Writer helps content creators transform audio from podcasts, webinars, and meetings into blogs, newsletters, and social posts effortlessly with AI."
+}, 
+{
+  "name": "Beyond",
+  "category": "Audio & Music Transcription",
+  "icon": "beyond.png",
+  "link": "https://www.beeyondai.com",
+  "description": "Beeyond AI offers AI-driven solutions across content, art, marketing, education, fitness, and music, simplifying complex tasks with ease."
+},
+{
+  "name": " Fireflies",
+  "category": "Audio & Music Transcription",
+  "icon": "firefiles.png",
+  "link": "https://fireflies.ai",
+  "description": "Fireflies.ai is an AI-driven conversation intelligence tool that enhances collaboration by tracking speaker talk time, sentiment, monologues, and key meeting metrics."
+}, 
+{
+"name": "Airgram",
+  "category": "Audio & Music Transcription",
+  "icon": "ai.png",
+  "link": "https://easywithai.com/",
+  "description": "Airgram integrates with Zoom, Google Meet, and Teams, offering collaborative agendas, task assignments, rich-text editing, and multilingual transcription for seamless meeting management."
+},
+{
+  "name": "riverside",
+  "category":"Audio & Music Transcription",
+  "icon": "riverside.png",
+  "link": "https://riverside.fm",
+  "description": "Riverside’s AI Transcription accurately transcribes audio and video in 100+ languages, offering speaker detection, format support, editing tools, and free downloads."
+}
+, {
+  "name": "zeemo",
+  "category": "Audio & Music Transcription",
+  "icon": "zeemo.png",
+  "link": "https://zeemo.ai/",
+  "description": "Zeemo is the ideal captioning tool for videos, improving accessibility and streamlining your workflow to reach a broader audience." 
+},
+{
+  "name": "whisper jax",
+  "category": "Audio & Music Transcription",
+  "icon": "whisper jax.png",
+  "link": "https://huggingface.co/spaces/sanchit-gandhi/whisper-jax",
+  "description": "Hugging Face is a community-driven platform for machine learning, providing models, datasets, and tools to foster AI innovation. It enables collaboration, model sharing, and discovery, with open-source resources and enterprise solutions for enhancing machine learning workflows." 
+},
+{
+  "name": "wave",
+  "category": "Audio & Music Transcription",
+  "icon": "wave.png",
+  "link": "https://wave.co",
+  "description": "Wave is an AI-powered app for recording, transcribing, and summarizing audio, designed to simplify note-taking during meetings and calls."
+}, {
+  "name": "waas",
+  "category": "Audio & Music Transcription",
+  "icon": "github.png",
+  "link": "https://github.com/schibsted/WAAS?utm_source=listedai",
+  "description": "WAAS is perfect for developers and audio enthusiasts who seek flexibility and high-quality audio. Leverage OpenAI Whisper’s capabilities with WAAS for superior functionality."
+}, {
+  "name": "voxqube",
+  "category": "Audio & Music Transcription",
+  "icon": "voxqube.png",
+  "link": "https://www.voxqube.com/",
+  "description": "Voxqube is an AI-driven tool that offers quick dubbing services for YouTube videos, helping users expand their reach into new global markets with multiple language options."
+},
+{
+  "name": "vowel ai",
+  "category": "Audio & Music Transcription",
+  "icon": "ai.png",
+  "link": "https://www.vowel.com",
+  "description": "Vowel AI is a cutting-edge platform that automates meeting summaries with AI, helping users save time and improve coordination through emojis, texts, and bookmarks."
+},
+{
+  "name": "voicify",
+  "category": "Audio & Music Transcription",
+  "icon": "jammable.png",
+  "link": "https://www.jammable.com",
+  "description": "Voicify is an AI-powered music platform enabling users to quickly create high-quality covers, offering a wide selection of artists and customization options."
+},
+{
+  "name": "voicepen ai",
+  "category": "Audio & Music Transcription",
+  "icon": "voicepen.png",
+  "link": "https://voicepen.ai/",
+  "description": "VoicePen AI uses artificial intelligence to effortlessly transform audio content like webinars, podcasts, and tutorials into written blog posts."
+},
+{
+  "name": "Vocol AI",
+  "category": "Audio & Music Transcription",
+  "icon": "vocol.png",
+  "link": "https://www.vocol.ai/",
+  "description": "A voice collaboration tool that enhances teamwork through AI-powered transcription, making communication seamless and efficient."
+},
+{
+  "name": "VN Split",
+  "category": "Audio & Music Transcription",
+  "icon": "vocol.png",
+  "link": "https://www.vocol.ai/",
+  "description": "AI-powered tool for summarizing voice notes in 50+ languages while ensuring privacy on messaging platforms like WhatsApp and iMessage."
+},
+{
+  "name": "Videodub",
+  "category": "Audio & Music Transcription",
+  "icon": "videodub.png",
+  "link": "https://videodub.io/",
+  "description": "AI-driven video translation and voiceover tool for content creators, educators, and businesses, enhancing accessibility and engagement worldwide."
+},
+{
+  "name": "Video2Text",
+  "category": "Audio & Music Transcription",
+  "icon": "video2text.png",
+  "link": "https://github.com/",
+  "description": "AI-powered tool using OpenAI Whisper to transcribe videos into text with high accuracy for seamless content conversion."
+},
+{
+  "name": "UniScribe",
+  "category": "Audio & Music Transcription",
+  "icon": "uniscribe.png",
+  "link": "https://www.uniscribe.co/",
+  "description": "AI-powered transcription and translation tool for converting audio and video content into text quickly and efficiently."
+},
+{
+  "name": "TuneFlow",
+  "category": "Audio & Music Transcription",
+  "icon": "tuneflow.png",
+  "link": "https://tuneflow.com/",
+  "description": "AI-driven digital audio workstation (DAW) for music creators, offering advanced tools for efficient and creative music production."
+},
+{
+  "name": "TubeOn AI",
+  "category": "Audio & Music Transcription",
+  "icon": "tubeon.png",
+  "link": "https://tubeonai.com/",
+  "description": "AI-powered tool summarizing YouTube videos and podcasts into concise insights, delivering key information within 30 seconds for efficient content consumption."
+},
+{
+  "name": "Traq.AI",
+  "category": "Audio & Music Transcription",
+  "icon": "traqai.png",
+  "link": "https://www.traq.ai",
+  "description": "AI-driven conversation intelligence platform for sales teams, analyzing calls, extracting insights, and improving strategies through automated transcription and data analysis."
+},
+{
+  "name": "TransMonkey",
+  "category": "Audio & Music Transcription",
+  "icon": "transmonkey.png",
+  "link": "https://www.transmonkey.ai/",
+  "description": "AI-powered translation software supporting 130+ languages, instantly converting documents, images, and videos while ensuring contextual accuracy in translations."
+},
+{
+  "name": "Transcript LOL",
+  "category": "Audio & Music Transcription",
+  "icon": "transcriptlol.png",
+  "link": "https://transcript.lol",
+  "description": "Advanced AI transcription tool for videos, audio files, and meetings, providing accurate and efficient speech-to-text conversion effortlessly."
+},
+{
+  "name": "Transcribe Audio",
+  "category": "Audio & Music Transcription",
+  "icon": "transcriptlol.png",
+  "link": "https://www.transcribeaudio.io",
+  "description": "Automated transcription service converting speech to text from various audio formats, ideal for interviews, meetings, and content creation."
+},
+{
+  "name": "ToastyAI",
+  "category": "Audio & Music Transcription",
+  "icon": "toastyai.png",
+  "link": "https://outcast.ai",
+  "description": "AI-powered tool for podcast creators, generating transcripts, show notes, timestamps, and blog content efficiently from podcast episodes."
+},
+{
+  "name": "Tipp",
+  "category": "Audio & Music Transcription",
+  "icon": "tipp.png",
+  "link": "https://www.tipp.so",
+  "description": "AI platform converting articles and newsletters into personalized audio podcasts for convenient, on-the-go content consumption."
+},
+{
+  "name": "TIMZ Flowers",
+  "category": "Audio & Music Transcription",
+  "icon": "timzflowers.png",
+  "link": "https://timz.flowers",
+  "description": "AI-powered meeting platform integrating video conferencing and asynchronous collaboration to enhance team productivity and efficiency."
+},
+{
+  "name": "Thundercontent",
+  "category": "Audio & Music Transcription",
+  "icon": "thundercontent.png",
+  "link": "https://thundercontent.com",
+  "description": "AI writing assistant generating high-quality, unique articles efficiently, streamlining content creation for writers and businesses."
+},
+{
+  "name": "TalkNotes",
+  "category": "Audio & Music Transcription",
+  "icon": "talknotes.png",
+  "link": "https://talknotes.io",
+  "description": "AI-powered tool converting voice memos into structured written content, supporting over 50 languages for efficient transcription."
+},
+{
+  "name": "Tailor by Threads",
+  "category": "Audio & Music Transcription",
+  "icon": "threads.png",
+  "link": "https://www.threads.net",
+  "description": "AI tool summarizing chat messages, generating action items, and enhancing productivity with customized prompts and call summarization."
+},
+{
+  "name": "Swell",
+  "category": "Audio & Music Transcription",
+  "icon": "swell.png",
+  "link": "https://www.swellai.com",
+  "description": "AI-powered content creation tool for podcasters, automating transcription, editing, and SEO-friendly content production."
+},
+{
+  "name": "SuperMemos",
+  "category": "Audio & Music Transcription",
+  "icon": "supermemos.png",
+  "link": "https://supermemos.ai",
+  "description": "iOS voice memo app leveraging AI for easy organization, transcription, and searchability of personal memos and recordings."
+},
+{
+  "name": "SumlyAI",
+  "category": "Audio & Music Transcription",
+  "icon": "sumly.png",
+  "link": "https://www.sumly.ai",
+  "description": "AI tool generating concise summaries of podcasts and delivering them directly to users’ inboxes for easy consumption."
+},
+{
+  "name": "StoryMage",
+  "category": "Audio & Music Transcription",
+  "icon": "storymage.png",
+  "link": "https://www.storymage.ai",
+  "description": "AI-powered tool converting podcast transcripts into LinkedIn posts and blogs, streamlining content creation for podcasters and businesses."
+},
+{
+  "name": "Spotalike",
+  "category": "Audio & Music Transcription",
+  "icon": "spotalike.png",
+  "link": "https://spotalike.com/en",
+  "description": "AI-powered music discovery tool creating personalized Spotify playlists based on users’ favorite tracks and artists."
+},
+{
+  "name": "SpeechGenerator",
+  "category": "Audio & Music Transcription",
+  "icon": "speechgenerator.png",
+  "link": "https://speechgenerator.co",
+  "description": "AI tool assisting users in generating personalized, high-quality speeches for various occasions efficiently."
+},
+{
+  "name": "SpeakAI",
+  "category": "Audio & Music Transcription",
+  "icon": "speakai.png",
+  "link": "https://speakai.co",
+  "description": "AI-powered transcription, analysis, and data visualization platform trusted by researchers, marketers, and businesses for extracting insights."
+},
+{
+  "name": "Sonix",
+  "category": "Audio & Music Transcription",
+  "icon": "sonix.png",
+  "link": "https://sonix.ai",
+  "description": "AI-driven automated transcription software offering fast, accurate transcription with a wide range of features."
+},
+{
+  "name": "Sonify",
+  "category": "Audio & Music Transcription",
+  "icon": "sonify.png",
+  "link": "https://www.sonify.io/",
+  "description": "AI-powered platform merging audio and data to develop innovative audio-first solutions for enhanced user engagement."
+},
+{
+  "name": "SongsLikeX",
+  "category": "Audio & Music Transcription",
+  "icon": "ai.png",
+  "link": "https://songslikex.com",
+  "description": "AI tool generating personalized playlists of similar songs based on users' favorite tracks for continuous music discovery."
+},
+{
+  "name": "SolidPoint",
+  "category": "Audio & Music Transcription",
+  "icon": "solidpoint.png",
+  "link": "https://solidpoint.ai",
+  "description": "AI-powered tool summarizing lengthy content into key points, enhancing reading efficiency and information retention."
+},
+{
+  "name": "Salina",
+  "category": "Audio & Music Transcription",
+  "icon": "salina.png",
+  "link": "https://salina.app",
+  "description": "AI-driven transcription and translation platform for podcasters, enabling seamless global content distribution."
+},
+{
+  "name": "Rythmex",
+  "category": "Audio & Music Transcription",
+  "icon": "rythmex.png",
+  "link": "https://rythmex.com",
+  "description": "AI-powered online transcription tool offering advanced editing features for accurate and efficient audio-to-text conversion."
+}
     ]
 export default toolsData;

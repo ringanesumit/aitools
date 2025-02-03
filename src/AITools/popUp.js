@@ -183,7 +183,7 @@ const contentData = {
       </div>
       <input type="text" placeholder="Your Name" required>
       <textarea placeholder="Your message" rows="5" required></textarea>
-      <button type="submit">Contact us</button>
+      <button  class= "contact" type="submit">Contact us</button>
     </form>
   </div>
 </div>
