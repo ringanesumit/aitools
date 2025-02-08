@@ -262,7 +262,7 @@ const App = () => {
           </button>
         </div>
         <div className="footer-right">
-          <p>© 2025 AIToolDirectory.V2</p>
+          <p>© 2025 AIToolDirectory.V3</p>
         </div>
       </footer>
     </div>
