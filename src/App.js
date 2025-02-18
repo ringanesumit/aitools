@@ -112,7 +112,7 @@ const App = () => {
             />
           </a>
         </h1>
-        <div
+        {/*<div
           className="theme-toggle"
           onClick={toggleTheme}
           style={{
@@ -125,7 +125,7 @@ const App = () => {
           }}
         >
           {isDarkMode ? "🌙" : "☀️"}
-        </div>
+        </div>*/}
       </header>
       {/* Category Selection Modal */}
       {showCategoryModal && (
