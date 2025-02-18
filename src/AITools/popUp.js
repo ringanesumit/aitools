@@ -94,7 +94,7 @@ const contentData = {
   </p>
   <address>
     <strong>AI Tool Directory</strong><br>
-    sumitringane@outlook.com
+    <h3>aitooldirectory@outlook.com</h3>
   </address>
 </div>
 
@@ -158,7 +158,7 @@ const contentData = {
     If you have any questions regarding these Terms or the Website, please reach out to us at:
   </p>
   <address>
-    sumitringane@outlook.com
+    <h3>aitooldirectory@outlook.com</h3>
   </address>
   <p>
     <em>We encourage you to review these Terms regularly for updates and changes.</em>
@@ -166,28 +166,19 @@ const contentData = {
 </div>
     `,
     contactUs: `
-      <div class="contact-us-container">      
-    <h1>Contact Us</h1>
-    <p>
+<div class="contact-us-container">      
+    <h1>Contact Us</h1>    
+<div class="contact-info">
+  <div class="contact-container">
+  <p>
         We’d love to hear from you! <br>Whether you have a question about our services, need assistance, or want to 
         provide feedback, feel free to reach out to us through the following channels.
-      </p>
+    </p>
     <p>Have a question or comment? We'd love to hear from you.</p>
-    <div class="contact-info">
-  <div class="contact-container">
-    <p>Have a question or comment? We'd love to hear from you.</p>
-    <form class="contact-form">
-      <div class="form-row">
-        <input type="text" placeholder="Subject" required>
-        <input type="email" placeholder="Your email address" required>
-      </div>
-      <input type="text" placeholder="Your Name" required>
-      <textarea placeholder="Your message" rows="5" required></textarea>
-      <button  class= "contact" type="submit">Contact us</button>
-    </form>
+    <p>drop mail on <h1>aitooldirectory@outlook.com</h1></p>
   </div>
 </div>
-  </div>
+</div>
     `,
   };
   export default contentData;
