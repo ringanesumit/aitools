@@ -1,7 +1,7 @@
 const toolsData = [
   {
     "name": "ChatGPT",
-    "category": "Chatbot",
+    "category": "Generative AI",
     "icon": "chatgpt.png",
     "link": "https://chat.openai.com",
     "description": "An advanced AI-powered chatbot by OpenAI."
@@ -13,6 +13,56 @@ const toolsData = [
     "link": "https://openai.com/dall-e",
     "description": "AI image generation tool."
   },
+  {
+    "name": "Perplexity",
+    "category": "Generative AI",
+    "icon": "perplexity.png",
+    "link": "https://www.perplexity.ai",
+    "description": "An AI-powered search engine that provides concise answers to user queries by summarizing information from multiple sources."
+  },
+   {
+      "name": "Deepseek",
+      "category": "Generative AI",
+      "icon": "deepseek.png",
+      "link": "https://www.deepseek.com",
+      "description": "Deepseek AI is an advanced artificial intelligence platform offering cutting-edge solutions in deep learning, NLP, and AI-driven automation for businesses and developers."
+    },
+    {
+      "name": "Copilot",
+      "category": "Generative AI",
+      "icon": "Copilot.png",
+      "link": "https://copilot.microsoft.com/",
+      "description": "GitHub Copilot is an AI-powered coding assistant that helps developers write code faster with intelligent autocompletions, suggestions, and real-time guidance."
+    },
+    {
+      "name": "Gemini",
+      "category": "Generative AI",
+      "icon": "gemini.jpg",
+      "link": "https://gemini.google.com",
+      "description": "Google Gemini is a powerful AI chatbot and assistant, designed to provide natural conversations, answer questions, generate content, and assist with various tasks using advanced AI models."
+    },
+    {
+      "name": "Claude",
+      "category": "Generative AI",
+      "icon": "claude.png",
+      "link": "https://www.anthropic.com/claude",
+      "description": "Claude AI, developed by Anthropic, is a next-gen AI chatbot that delivers safe, helpful, and conversational AI experiences for businesses and personal use."
+    },
+    {
+      "name": "Ideogram",
+      "category": "Generative AI",
+      "icon": "ideogram.png",
+      "link": "https://ideogram.ai",
+      "description": "Ideogram AI is a powerful AI-driven text-to-image generator, allowing users to create stunning, high-quality artwork, digital designs, and visuals effortlessly."
+    },
+    {
+      "name": "Grok",
+      "category": "Generative AI",
+      "icon": "grok.png",
+      "link": "https://x.ai",
+      "description": "Grok AI, developed by xAI, is an intelligent chatbot offering deep insights, real-time knowledge, and conversational assistance across various domains."
+    }
+  , 
   {
     "name": "Jasper",
     "category": "Content Creation",
@@ -248,14 +298,7 @@ const toolsData = [
           "description": "A free online AI image generator that transforms text prompts into images."        
         },
         //Search Engine tools        
-  {
-    "name": "Perplexity AI",
-    "category": "AI Search Engine",
-    "icon": "perplexity.png",
-    "link": "https://www.perplexity.ai",
-    "description": "An AI-powered search engine that provides concise answers to user queries by summarizing information from multiple sources."
-  },
-  {
+    {
     "name": "Google AI Overviews",
     "category": "AI Search Engine",
     "icon": "google_ai_overviews.jpeg",
