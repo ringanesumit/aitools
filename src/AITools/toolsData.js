@@ -47,8 +47,7 @@ const toolsData = [
       "description": "Google Gemini is a powerful AI chatbot and assistant, designed to provide natural conversations, answer questions, generate content, and assist with various tasks using advanced AI models."
     },
     {
-      "name": ".claude/?utm_source=aitooldirectory.io",
-
+      "name": "claude",
       "category": "Generative AI",
       "icon": "claude.png",
       "link": "https://www.anthropic.com/claude/?utm_source=aitooldirectory.io",
@@ -89,8 +88,7 @@ const toolsData = [
     "description": "AI-powered tool for grammar and spell checking."
   },
   {
-    "name": "Copy.ai/?utm_source=aitooldirectory.io",
-
+    "name": "CopyAI",
     "category": "Marketing",
     "icon": "copyai.png",
     "link": "https://www.copy.ai/?utm_source=aitooldirectory.io",
@@ -231,7 +229,7 @@ const toolsData = [
       "description": "Online AI animation generator and video maker for studio-quality content."
     },
     {
-      "name": "Steve.AI/?UTM_SOURCE=AITOOLDIRECTORY.IO",
+      "name": "SteveAI",
 
       "category": "Video Creation",
       "icon": "steve.png",
@@ -291,7 +289,7 @@ const toolsData = [
         "description": "IBM's integrated environment for data scientists, application developers, and subject matter experts to collaboratively and easily work with data."
       },
       {
-        "name": "H2O.ai/?utm_source=aitooldirectory.io",
+        "name": "H2OAI",
 
         "category": "Machine Learning",
         "icon": "h2o_ai.png",
@@ -338,7 +336,7 @@ const toolsData = [
     "description": "Google's AI-enhanced search feature that combines traditional search with AI-generated summaries, offering up-to-date information."
   },
   {
-    "name": "You.com/?utm_source=aitooldirectory.io",
+    "name": "You.com",
 
     "category": "AI Search Engine",
     "icon": "you_com.png",
@@ -494,7 +492,7 @@ const toolsData = [
     "description": "An AI-powered SEO tool designed to assist professionals and agencies in creating content optimized for search rankings. It leverages real-time web data and algorithms to handle semantic optimization, ensuring effective integration of primary and secondary keywords."
   },
   {
-    "name": "SEO.AI/?UTM_SOURCE=AITOOLDIRECTORY.IO",
+    "name": "SEO.AI",
 
     "category": "SEO Content Generation",
     "icon": "seoai.jpeg",
@@ -734,7 +732,7 @@ const toolsData = [
   "description": "AI-powered tool summarizing YouTube videos and podcasts into concise insights, delivering key information within 30 seconds for efficient content consumption."
 },
 {
-  "name": "Traq.AI/?UTM_SOURCE=AITOOLDIRECTORY.IO",
+  "name": "Traq.AI",
 
   "category": "Audio & Music Transcription",
   "icon": "traqai.png",
@@ -1426,8 +1424,7 @@ const toolsData = [
               "description": "Landr is an AI-driven platform offering over $3000 in plugins, samples, and tools for music creation and release. Its AI-powered mastering engine streamlines the process of creating high-quality tracks, making it ideal for musicians and producers."
             },
             {
-              "name": "Lalal.ai/?utm_source=aitooldirectory.io",
-
+              "name": "Lalal.ai",
               "category": "Audio & Music Editing",
               "icon": "Lalal.png",
               "link": "https://www.lalal.ai/?utm_source=aitooldirectory.io",
@@ -1435,16 +1432,14 @@ const toolsData = [
               "description": "Lalal.ai is an AI-powered vocal and instrumental track remover offering fast and accurate stem separation. Its proprietary Phoenix algorithm provides high-quality results with fewer artifacts, enabling users to extract vocals, accompaniment, and instrument tracks from any audio or video."
             },
               {
-                "name": "Krisp.ai/?utm_source=aitooldirectory.io",
-
+                "name": "Krisp.ai",
                 "category": "Audio & Music Editing",
                 "icon": "Krisp.png",
                 "link": "https://krisp.ai/?utm_source=aitooldirectory.io",
                 "description": "Krisp.ai utilizes AI-driven noise-canceling technology to eliminate background noise and echo during online meetings and calls, ensuring clear communication."
               },
               {
-                "name": "Koolio.ai/?utm_source=aitooldirectory.io",
-
+                "name": "Koolio.ai",
                 "category": "Audio & Music Editing",
                 "icon": "Koolio.png",
                 "link": "https://www.koolio.ai/?utm_source=aitooldirectory.io",
